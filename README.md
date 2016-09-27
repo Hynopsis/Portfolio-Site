@@ -1,2 +1,2 @@
 # Portfolio-Site
-Here is a portfolio site I put together to show some of my work.  I will continue to add to it as a polish some more of my projects.
+Here is a portfolio site I put together to show some of my work.  I will continue to add to it as a polish some more of my projects.  It is not perfect but I think it gets the point across.  I tried to go with something really simple, choosing icons as headers of words.  The messaging does work, but it needs to be on a php enabled server.  The actual link to the site is http://www.rpetersen4.btcwsd.com/Portfolio/.  
