@@ -1,26 +1,8 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [Freelancer](http://startbootstrap.com/template-overviews/freelancer/)
+# [Portfolio Site](http://www.rpetersen4.btcwsd.com/Portfolio/)
 
-[Freelancer](http://startbootstrap.com/template-overviews/freelancer/) is a one page freelancer portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid with hover effects, full page portfolio item modals, and a working PHP contact form.
+This is a one page portfolio page using [Bootstrap](http://getbootstrap.com/) and based on the freelancer [template](https://startbootstrap.com/template-overviews/freelancer/).  It has strayed pretty far from the original template, but still uses some of the underlying php and modal code.  Feel free to use this in any variation if you find if useful.  
 
-## Getting Started
+## Refresher Courses
 
-To use this theme, choose one of the following options to get started:
-* Download the latest release on Start Bootstrap
-* Fork this repository on GitHub
+This will eventually be moved to another individual site, but for now it is part of this one.  At the bottom of the page there is a Skill Test section which moves to another series of pages that I use for refreshing myself on various topics.  It works like flash cards.  It loads all the questions, answers, and hints from a database on load, then randomizes them.  If you know the answer to a question you can click the remove checkbox to remove the question from the pool.  If it has a hint, you can click the hint link to show it.  Either way you can click the show answer to verify your knowledge.  When you are ready you can click next question to generate another one.  Once all questions have been gone through (70 - 120 per topic), it will take the remaining questions and reshuffle them for viewing.  Once all questions have been removed you will be congratulated.  If you want to do it again you have to reload the page. 
 
-## Bugs and Issues
-
-Have a bug or an issue with this theme? [Open a new issue](https://github.com/IronSummitMedia/startbootstrap-freelancer/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/freelancer/).
-
-## Creator
-
-Start Bootstrap was created by and is maintained by **David Miller**, Managing Parter at [Iron Summit Media Strategies](http://www.ironsummitmedia.com/).
-
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
-
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
-## Copyright and License
-
-Copyright 2013-2015 Iron Summit Media Strategies, LLC. Code released under the [Apache 2.0](https://github.com/IronSummitMedia/startbootstrap-freelancer/blob/gh-pages/LICENSE) license.
