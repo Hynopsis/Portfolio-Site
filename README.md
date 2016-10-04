@@ -1,6 +1,26 @@
-# Portfolio-Site
-Here is a portfolio site I put together to show some of my work.  I will continue to add to it as a polish some more of my projects.  It is not perfect but I think it gets the point across.  I tried to go with something really simple, choosing icons as headers instead of words.  The messaging does work, but it needs to be on a php enabled server.  The actual link to the site is http://www.rpetersen4.btcwsd.com/Portfolio/.  
+# [Start Bootstrap](http://startbootstrap.com/) - [Freelancer](http://startbootstrap.com/template-overviews/freelancer/)
 
-I am using this site to create a web development refresher course for myself and anyone else that could use it.  Though there are not links on the main page, they can be accessed at http://www.rpetersen4.btcwsd.com/Portfolio/htmlQuiz.php.  The css and javascript header links work as well for other pages of quizzes.  This will eventually be move out to it's own site at one point when it is complete.  Those sections of code have not been reviewed and are really just for personal use - so please don't judge it yet.  I'm just mentioning it in case someone finds it useful.  
+[Freelancer](http://startbootstrap.com/template-overviews/freelancer/) is a one page freelancer portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid with hover effects, full page portfolio item modals, and a working PHP contact form.
 
-So when the page is loaded a larger number of questions, answers, and hints are loaded from a database.  They are then randomized and presented one at a time.  You can show a hint if there is one.  You can click the remove box to remove this questions from the pool, if you know it.  Currently if you view the answer you cannot go back to view the question again, yet.  So you proceed through the questions, removing the ones that you know.  Once you have gone through all the questions, the remaining questions are randomized again so you can go through them again and again until they are all removed.  So basically it works like flash cards.  I find it helpful to review them on the go. I chose to not use ajax and to load all questions at once in case internet service is spotty, and it is easier to randomize the questions.  
+## Getting Started
+
+To use this theme, choose one of the following options to get started:
+* Download the latest release on Start Bootstrap
+* Fork this repository on GitHub
+
+## Bugs and Issues
+
+Have a bug or an issue with this theme? [Open a new issue](https://github.com/IronSummitMedia/startbootstrap-freelancer/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/freelancer/).
+
+## Creator
+
+Start Bootstrap was created by and is maintained by **David Miller**, Managing Parter at [Iron Summit Media Strategies](http://www.ironsummitmedia.com/).
+
+* https://twitter.com/davidmillerskt
+* https://github.com/davidtmiller
+
+Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+
+## Copyright and License
+
+Copyright 2013-2015 Iron Summit Media Strategies, LLC. Code released under the [Apache 2.0](https://github.com/IronSummitMedia/startbootstrap-freelancer/blob/gh-pages/LICENSE) license.

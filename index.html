@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+	<!-- Based around this awesome bootstrap theme template https://blackrockdigital.github.io/startbootstrap-freelancer/ -->
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,6 +21,7 @@
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
+	<link rel="icon" type="image/ico" href="img/gear.png">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -31,24 +33,51 @@
 
 <body id="page-top" class="index">
 
+	
+<!--
 	<nav>	
 		<div class="row">
-		<!-- instead of linking to another page, they just jump to the right section on the page -->
-		   <div class="col-sm-4 col-xs-4 text-center navText">
-				  <a href="#webDesign">Html5</a>      
+		   <div class="col-sm-4 col-xs-4 text-center navText pageScroll">
+				  <a href="#webDesign">Web Design</a>      
 		   </div>
-		   <div class="col-sm-4 col-xs-4 text-center navText">
-				  <a href="#gameDev">CSS3</a>    
+		   <div class="col-sm-4 col-xs-4 text-center navText pageScroll">
+				  <a href="#gameDev">Game Development</a>    
 		   </div>
-		   <div class="col-sm-4 col-xs-4 text-center navText">
-				  <a href="#contact">JavaScript</a>      
+		   <div class="col-sm-4 col-xs-4 text-center navText pageScroll">
+				  <a href="#contact">Contact</a>      
 		   </div>
 		   
 		</div>	
 	</nav>
 	
+	-->
     <!-- Header -->
     <header>
+	<nav id="mainNav" class="navbar navbar-default navbar-custom">
+	
+        <div >
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav nav-justified portNav">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#webDesign">Web Design</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#gameDev">Game Development</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 padTop">
@@ -292,7 +321,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <small>Copyright &copy; Robert Petersen 2016 <a href="test.html"> Skill Test</span></small>
+                        <small>Copyright &copy; Robert Petersen 2016 <a href="htmlQuiz.php"> Skill Test</span></small>
                     </div>
                 </div>
             </div>

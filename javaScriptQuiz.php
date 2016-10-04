@@ -1,8 +1,3 @@
-<?php
-// Start the session to save question data 
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +11,7 @@ session_start();
 
 	<link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
 	
-    <title>Html5 Refresher</title>
+    <title>JavaScript Refresher</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -45,9 +40,9 @@ session_start();
 
 		<nav>
           <ul class="nav nav-justified ">
-            <li class="active" id="html5"><a href="htmlQuiz.php"><img src="img/htmlNav.png" class="navImg"></a></li>
+            <li id="html5"><a href="htmlQuiz.php"><img src="img/htmlNav.png" class="navImg"></a></li>
             <li id="css" ><a href="cssQuiz.php"><img src="img/cssNav.png" class="navImg"></a></li>
-            <li id="js" ><a href="javaScriptQuiz.php"><img src="img/jsNav.png" class="navImg"></a></li>
+            <li class="active" id="js" ><a href="javaScriptQuiz.php"><img src="img/jsNav.png" class="navImg"></a></li>
           </ul>
         </nav>
 	
@@ -287,7 +282,7 @@ session_start();
 			
 			mysql_connect('localhost',"rpeterse_2101","Pickle2101");
 			@mysql_select_db('rpeterse_tests') or die( "Unable to select database");
-			$query = 'SELECT Question, Answer, Hint FROM Html5';
+			$query = 'SELECT Question, Answer, Hint FROM JavaScript';
 			$result = mysql_query($query);	
 
 			if (!$result) {
