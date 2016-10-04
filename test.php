@@ -11,12 +11,10 @@ session_start();
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Small site for testing my knowledge and an excuse to work with databases.">
+    <meta name="description" content="Small site for testing my knowledge, and an excuse to work with databases.">
     <meta name="author" content="Robert Petersen">
 
-	<link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
-	
-    <title>Html5 Refresher</title>
+    <title>Send me new questions!</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -26,11 +24,8 @@ session_start();
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
-	
 	<!--our custom functions-->
 	<script src="js/custom.js"></script>
-	
-	
 	
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,18 +40,50 @@ session_start();
 
 		<nav>
           <ul class="nav nav-justified ">
-            <li class="active" id="html5"><a href="htmlQuiz.php"><img src="img/htmlNav.png" class="navImg"></a></li>
-            <li id="css" ><a href="cssQuiz.php"><img src="img/cssNav.png" class="navImg"></a></li>
-            <li id="js" ><a href="javaScriptQuiz.php"><img src="img/jsNav.png" class="navImg"></a></li>
+            <li class="active" id="html5"><a href="#">Html5</a></li>
+            <li><a href="#">Css</a></li>
+            <li><a href="#">JavaScript</a></li>
           </ul>
         </nav>
+	<!--	
+	<nav>	
+		<div class="row padTop">
+		   <div class="col-sm-4 col-xs-4 text-center navTextTest">
+		   
+				<a href="javascript:showData('Html5');" id="focusOnStart">Html5</a>  
+				
+				<script type="text/javaScript">
+					document.getElementById('focusOnStart').focus();		
+				</script>
+				
+		   </div>
+		   <div class="col-sm-4 col-xs-4 text-center navTextTest">
+				  <a href="javascript:showData('CSS3');">CSS3</a>    
+		   </div>
+		   <div class="col-sm-4 col-xs-4 text-center navTextTest">
+				  <a href="javascript:showData('JavaScript');">JavaScript</a>     
+		   </div>
+		   
+		</div>	
+	</nav>
+	-->
 	
+    <!-- Header 
+    <header>
+            <div class="row hugeHeight"><!-- style="minHeight: 400px"
+                <div class="col-lg-12 padTop  padBottom marginBottom hugeHeight">
+					
+                </div>
+            </div>
+    </header>
+	-->
+    <!-- Section containing the Web Design work -->
 	
 	<hr class="iconHr">  <!-- just a gray line divider between sections  -->
 	
 	<!-- would like to use sections, but validation throws a warning since using an image to label the section instead of and h tag -->
     <section class="portfolio">
-				
+	
 		<div>
 		
             <div class="row center marginSides">
@@ -64,6 +91,33 @@ session_start();
 				</div>
 				
                 <div id="qPanel" class="col-sm-10 qPanel padTopLarge padSides largeFont padBottom">
+					
+					
+					<?php
+					
+						/*var javaScriptVar = "<?php echo $someVar; ?>";*/
+						
+						//connect to our database
+						mysql_connect('localhost',"rpeterse_2101","Pickle2101");
+						@mysql_select_db('rpeterse_tests') or die( "Unable to select database");
+						
+						//select from our database our questions, we select the whole thiing since need its length
+						$query = 'SELECT Question FROM Questions WHERE CategoryId = 1';
+						$result = mysql_query($query);						
+						$num = mysql_numrows($result);
+						
+						if (!$result) {
+							die('Could not query:' . mysql_error());
+						}
+						
+						$randomNumber = (mt_rand(0,$num));
+						$_SESSION["rand"] = $randomNumber;
+						
+						
+						echo htmlentities(mysql_result($result, $randomNumber)) . ' index: ' , $randomNumber;
+						
+					
+					?>
 					
                 </div>
 				
@@ -73,7 +127,26 @@ session_start();
 			<div class="row">
                 <div id="aPanel" class="col-sm-12 text-center qPanel padTopLarge padSides largeFont padBottom">
                     
+					<?php
 					
+						/*var javaScriptVar = "<?php echo $someVar; ?>";*/
+						
+						//connect to server and get answer
+						mysql_connect('localhost',"rpeterse_2101","Pickle2101");
+						@mysql_select_db('rpeterse_tests') or die( "Unable to select database");
+						
+						$query = 'SELECT Answer FROM Questions';
+						$result = mysql_query($query);						
+						$num = mysql_numrows($result);
+						
+						if (!$result) {
+							die('Could not query:' . mysql_error());
+						}
+						
+						echo htmlentities(mysql_result($result, $_SESSION["rand"]));
+					
+					
+					?>
                 </div>
 				
 				
@@ -82,44 +155,53 @@ session_start();
 			<div class="row">
                 <div id="hPanel" class="col-sm-12 text-center qPanel">
                     
+					<?php
 					
+						/*var javaScriptVar = "<?php echo $someVar; ?>";*/
+						
+						//connect to server and get answer
+						mysql_connect('localhost',"rpeterse_2101","Pickle2101");
+						@mysql_select_db('rpeterse_tests') or die( "Unable to select database");
+						
+						$query = 'SELECT Hint FROM Questions';
+						$result = mysql_query($query);						
+						$num = mysql_numrows($result);
+						
+						if (!$result) {
+							die('Could not query:' . mysql_error());
+						}
+						
+						echo htmlentities(mysql_result($result, $_SESSION["rand"]));
+					
+					
+					?>
                 </div>
 				
 				
             </div>
 			<div class="row">
-				<div class="centerLabel marginSides padBottom"> <!--padTop padBottomXL -->
-					<!--
+				<div class="padTop padBottomXL centerLabel">
+				
 					<div class="col-sm-4 padTop">
 						<form id="formMain" method="POST" name="go" action="" novalidate>
 						<button id="showQuestion" class="myButton" type="submit">Next Question</button>
+						<!--<a href="#" class="myButton">Next Question</a>-->
 						
 						</form>
 					</div>	
-					-->
-					
-					<div class="col-xs-4 padTop">
-						<button id="showQuestion" class="myButton" onClick="newQuestion()">Next Question</button>
-						
-					</div>
-					
-					<div class="col-xs-4 padTop" id="showHint">					
+					<div class="col-sm-4 padTop" id="showHint">					
 						<!-- so weird, needs to be of type button not to subbmit if within form-->	
-						<a href="#" id="hint" onclick="toggleHint();return false;">Show Hint</a>
-						<div class="rHolder">
-							<label for="remove" id="rLabel">Remove</label>
-							<input id="remove" class="qCheck" type="checkbox" name="remove" >
-						</div>
+						<a href="#" id="hint" onclick="return toggleHint();">Show Hint</a>
 						<!--<p><strong><em>Show Hint</em></strong></p>-->
 						<!--<button id="showHint" type="button" class="myButton"  onClick="showAnswer()">Show Hint</button>-->
 					</div>
-					<div class="col-xs-4 padTop">					
+					<div class="col-sm-4 padTop">					
 						<!-- so weird, needs to be of type button not to subbmit if within form-->						
 						<button id="showAnswer" type="button" class="myButton"  onClick="showAnswer()">Show Answer</button>
 					</div>
 					
 				</div>
-			</div>
+			<div>
 				
         </div>
     </section>
@@ -208,11 +290,12 @@ session_start();
 		
             <div class="container">
                 <div class="row">
-                    <div class="footer-col col-md-6">
+                    <div class="footer-col col-md-4">
                         <h3>Contact</h3>
 						<p>lastresortname@hotmail.com</p>
+						<p>608-295-8536</p>
                     </div>
-                    <div class="footer-col col-md-6">
+                    <div class="footer-col col-md-4">
                         <h3>Get Social</h3>
                         <ul class="list-inline">
                             <li>
@@ -229,7 +312,10 @@ session_start();
                             </li>
                         </ul>
                     </div>
-                    
+                    <div class="footer-col col-md-4">
+                        <h3>Resume</h3>
+                        <p>I also have a PDF resume, for anyone interested.  Nothing to hide, click <a href="http://rpetersen4.btcwsd.com/Portfolio/downloads/RobertPetersenResume.pdf">here!</a> to download.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -272,52 +358,8 @@ session_start();
     <script src="js/classie.js"></script>
     <script src="js/cbpAnimatedHeader.js"></script>
 	
-	<!--our custom functions-->
-	<script src="js/custom.js"></script>
-	
-	
-	<script type="text/javascript">
-		
-		
-		<?php	
-		
-			$questions = array(); 
-			$answers = array();
-			$hints = array();
-			
-			mysql_connect('localhost',"rpeterse_2101","Pickle2101");
-			@mysql_select_db('rpeterse_tests') or die( "Unable to select database");
-			$query = 'SELECT Question, Answer, Hint FROM Html5';
-			$result = mysql_query($query);	
-
-			if (!$result) {
-				die('Could not query:' . mysql_error());
-				}	
-				
-			$num = mysql_numrows($result);
-			//take our query result and add to an array
-			for ($x = 0; $x < $num; $x++) {
-				$questions[] = mysql_result($result, $x, 0);
-				$answers[] = mysql_result($result, $x, 1);
-				$hints[] = mysql_result($result, $x, 2);
-			} 
-			$questions = json_encode($questions);
-			$answers = json_encode($answers);
-			$hints = json_encode($hints);
-		?>
-		//global class and vars from code-behind custom.js
-		//maxQuestions = <?php echo $num; ?>;
-		//add the array to our js object, this way we dont have to reload the page or use ajax
-		testData.questions = <?php echo $questions; ?>;
-		testData.answers = <?php echo $answers; ?>;
-		testData.hints = <?php echo $hints; ?>;
-		
-		//shaveArray();
-		initQuestions();
-		assignContent();
-		
-		//newQuestion(true);
-		
+	<script type="text/javaScript">
+		document.getElementById('html5').focus();		
 	</script>
 	
 	

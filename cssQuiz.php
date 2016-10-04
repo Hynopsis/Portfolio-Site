@@ -42,7 +42,7 @@
           <ul class="nav nav-justified ">
             <li id="html5"><a href="htmlQuiz.php"><img src="img/htmlNav.png" class="navImg"></a></li>
             <li  class="active" id="css" ><a href="cssQuiz.php"><img src="img/cssNav.png" class="navImg"></a></li>
-            <li id="js" ><a href="#"><img src="img/jsNav.png" class="navImg"></a></li>
+            <li id="js" ><a href="javaScriptQuiz.php"><img src="img/jsNav.png" class="navImg"></a></li>
           </ul>
         </nav>
 	
